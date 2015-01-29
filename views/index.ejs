@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Conditions: <%= body.weather[0].main %>, <%= body.weather[0].description %></p>
+    <p>Temperature: <%= Math.floor(((body.main.temp - 273.15) * 1.8000) + 32) %> F</p>
+    <p>Humidity: <%= body.main.humidity %>%</p>
+    <p>Wind: <%= Math.floor(body.wind.speed / 60 / 60) %> MPH</p>
+    <p>Clouds: <%= body.clouds.all %>%</p>
+  </body>
+</html>
